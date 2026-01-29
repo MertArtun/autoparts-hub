@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# ASIN yönlendirme kuralı
+# Örnek: /asin/B0F36VDVG1 -> https://www.amazon.com/dp/B0F36VDVG1?tag=MYTAG-20
+RewriteRule ^asin/([A-Z0-9]+)$ https://www.amazon.com/dp/$1?tag=MYTAG-20 [R=302,L]

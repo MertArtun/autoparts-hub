@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Amazon...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .asin-code {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .note {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Redirecting to Amazon...</div>
+        <div class="spinner"></div>
+        <div class="asin-code" id="asinDisplay"></div>
+        <div class="note">If you are not redirected automatically, <a href="#" id="manualLink" style="color: #fff; text-decoration: underline;">click here</a>.</div>
+    </div>
+
+    <script>
+        // URL'den ASIN'i al
+        const urlParams = new URLSearchParams(window.location.search);
+        const asin = urlParams.get('asin');
+        
+        if (asin) {
+            // Amazon affiliate linki oluştur
+            // ÖNEMLİ: MYTAG-20 kısmını kendi Amazon Associates TAG'iniz ile değiştirin
+            const amazonUrl = `https://www.amazon.com/dp/${asin}?tag=MYTAG-20`;
+            
+            // Hemen yönlendir (bekleme yok)
+            window.location.replace(amazonUrl);
+        } else {
+            document.getElementById('asinDisplay').textContent = 'ASIN not found!';
+            document.querySelector('.message').textContent = 'Invalid URL';
+        }
+    </script>
+</body>
+</html>
