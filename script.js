@@ -1,3 +1,21 @@
+// Affiliate Configuration
+const AMAZON_AFFILIATE_TAG = "autopartshub2-20";
+
+/**
+ * Append affiliate tag to Amazon URLs.
+ * Removes any existing tag and adds the correct one.
+ */
+function appendAmazonTag(url) {
+  try {
+    const parsed = new URL(url);
+    parsed.searchParams.delete("tag");
+    parsed.searchParams.set("tag", AMAZON_AFFILIATE_TAG);
+    return parsed.toString();
+  } catch {
+    return url;
+  }
+}
+
 // Amazon Products Data
 const amazonProducts = [
     {
@@ -9,7 +27,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.5/5)",
         prime: true,
         description: "Premium beam wiper blades with all-weather performance. Fits most vehicles.",
-        amazonLink: "https://www.amazon.com/s?k=bosch+icon+wiper+blades"
+        amazonLink: "https://www.amazon.com/s?k=bosch+icon+wiper+blades&tag=autopartshub2-20"
     },
     {
         id: 2,
@@ -20,7 +38,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.8/5)",
         prime: true,
         description: "Advanced full synthetic engine oil for superior engine protection and performance.",
-        amazonLink: "https://www.amazon.com/s?k=mobil+1+synthetic+oil"
+        amazonLink: "https://www.amazon.com/s?k=mobil+1+synthetic+oil&tag=autopartshub2-20"
     },
     {
         id: 3,
@@ -31,7 +49,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.6/5)",
         prime: false,
         description: "High-performance AGM battery with excellent cold-cranking power and durability.",
-        amazonLink: "https://www.amazon.com/s?k=acdelco+battery"
+        amazonLink: "https://www.amazon.com/s?k=acdelco+battery&tag=autopartshub2-20"
     },
     {
         id: 4,
@@ -42,7 +60,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐ (4.3/5)",
         prime: true,
         description: "Premium ceramic brake pads for quiet operation and superior stopping power.",
-        amazonLink: "https://www.amazon.com/s?k=wagner+brake+pads"
+        amazonLink: "https://www.amazon.com/s?k=wagner+brake+pads&tag=autopartshub2-20"
     },
     {
         id: 5,
@@ -53,7 +71,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.7/5)",
         prime: true,
         description: "Washable, reusable air filter designed to increase horsepower and acceleration.",
-        amazonLink: "https://www.amazon.com/s?k=k%26n+air+filter"
+        amazonLink: "https://www.amazon.com/s?k=k%26n+air+filter&tag=autopartshub2-20"
     },
     {
         id: 6,
@@ -64,7 +82,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.6/5)",
         prime: true,
         description: "Water repellent treatment for improved visibility and safer driving in rain.",
-        amazonLink: "https://www.amazon.com/s?k=rain-x+glass+treatment"
+        amazonLink: "https://www.amazon.com/s?k=rain-x+glass+treatment&tag=autopartshub2-20"
     },
     {
         id: 7,
@@ -75,7 +93,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.7/5)",
         prime: false,
         description: "Premium AGM battery with exceptional starting power and long service life.",
-        amazonLink: "https://www.amazon.com/s?k=optima+redtop+battery"
+        amazonLink: "https://www.amazon.com/s?k=optima+redtop+battery&tag=autopartshub2-20"
     },
     {
         id: 8,
@@ -86,7 +104,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.8/5)",
         prime: false,
         description: "Premium all-season tire with excellent tread life and all-weather traction.",
-        amazonLink: "https://www.amazon.com/s?k=michelin+defender+tire"
+        amazonLink: "https://www.amazon.com/s?k=michelin+defender+tire&tag=autopartshub2-20"
     }
 ];
 
@@ -626,7 +644,7 @@ function displayAmazonProducts() {
                 <div class="product-price">${product.price}</div>
                 ${product.prime ? '<span class="prime-badge">Prime ✓</span>' : ''}
                 <p class="product-description">${product.description}</p>
-                <a href="${product.amazonLink}" target="_blank" class="amazon-button" rel="nofollow noopener">
+                <a href="${appendAmazonTag(product.amazonLink)}" target="_blank" class="amazon-button" rel="noopener noreferrer nofollow sponsored">
                     View on Amazon →
                 </a>
             </div>

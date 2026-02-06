@@ -18,7 +18,7 @@ app.get('/asin/:asin', (req, res) => {
         return res.status(400).send('Invalid ASIN format');
     }
     
-    const amazonUrl = `https://www.amazon.com/dp/${asin}?tag=your-tag-20`;
+    const amazonUrl = `https://www.amazon.com/dp/${asin}?tag=autopartshub2-20`;
     
     // 302 redirect
     res.redirect(302, amazonUrl);

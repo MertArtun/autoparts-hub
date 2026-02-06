@@ -10,7 +10,7 @@ $requestUri = $_SERVER['REQUEST_URI'];
 // /asin/ASIN formatını kontrol et
 if (preg_match('#^/asin/([A-Z0-9]+)#', $requestUri, $matches)) {
     $asin = $matches[1];
-    $amazonUrl = "https://www.amazon.com/dp/" . $asin . "?tag=MYTAG-20";
+    $amazonUrl = "https://www.amazon.com/dp/" . $asin . "?tag=autopartshub2-20";
     
     // 302 yönlendirme yap
     header("Location: " . $amazonUrl, true, 302);
