@@ -8,7 +8,7 @@
 $requestUri = $_SERVER['REQUEST_URI'];
 
 // /asin/ASIN formatını kontrol et
-if (preg_match('#^/asin/([A-Z0-9]+)#', $requestUri, $matches)) {
+if (preg_match('#^/asin/([A-Za-z0-9]{10})#', $requestUri, $matches)) {
     $asin = $matches[1];
     $amazonUrl = "https://www.amazon.com/dp/" . $asin . "?tag=autopartshub2-20";
     

@@ -14,7 +14,7 @@ Bu klasörde 4 farklı yönlendirme çözümü bulunmaktadır. Sunucu tipinize g
 
 **Kurulum:**
 1. `.htaccess` dosyası zaten hazır
-2. **ÖNEMLİ:** İçindeki `MYTAG-20` kısmını kendi Amazon affiliate tag'iniz ile değiştirin
+2. **ÖNEMLİ:** İçindeki `autopartshub2-20` kısmını kendi Amazon affiliate tag'iniz ile değiştirin
 3. Dosyayı web sitenizin root klasörüne yükleyin
 4. Test edin: `https://ornek.com/asin/B0F36VDVG1`
 
@@ -34,7 +34,7 @@ Bu klasörde 4 farklı yönlendirme çözümü bulunmaktadır. Sunucu tipinize g
 
 **Kurulum:**
 1. `nginx.conf` dosyasındaki konfigürasyonu kopyalayın
-2. **ÖNEMLİ:** `MYTAG-20` kısmını kendi tag'iniz ile değiştirin
+2. **ÖNEMLİ:** `autopartshub2-20` kısmını kendi tag'iniz ile değiştirin
 3. Konfigürasyonu nginx config dosyanıza ekleyin (genellikle `/etc/nginx/sites-available/`)
 4. Nginx'i yeniden başlatın: `sudo systemctl reload nginx`
 5. Test edin: `https://ornek.com/asin/B0F36VDVG1`
@@ -57,7 +57,7 @@ RewriteEngine On
 RewriteRule ^asin/([A-Z0-9]+)$ /redirect.php [L,QSA]
 ```
 
-2. `redirect.php` dosyasında `MYTAG-20` kısmını değiştirin
+2. `redirect.php` dosyasında `autopartshub2-20` kısmını değiştirin
 3. Her iki dosyayı da sunucuya yükleyin
 
 #### Seçenek B: Doğrudan kullanım
@@ -75,7 +75,7 @@ RewriteRule ^asin/([A-Z0-9]+)$ /redirect.php [L,QSA]
 
 **Kurulum:**
 
-1. **ÖNEMLİ:** `server.js` dosyasında `MYTAG-20` kısmını değiştirin
+1. **ÖNEMLİ:** `server.js` dosyasında `autopartshub2-20` kısmını değiştirin
 
 2. Terminalde şu komutları çalıştırın:
 ```bash
@@ -107,14 +107,14 @@ https://ornek.com/asin/B0F36VDVG1
 
 Başarılı olursa şu adrese yönlendirilmelisiniz:
 ```
-https://www.amazon.com/dp/B0F36VDVG1?tag=SIZIN-TAG-20
+https://www.amazon.com/dp/B0F36VDVG1?tag=autopartshub2-20
 ```
 
 ---
 
 ## ⚠️ ÖNEMLİ HATIRLATMALAR
 
-1. **MYTAG-20** yazan TÜM yerleri kendi Amazon Associates TAG'inizle değiştirin
+1. **autopartshub2-20** yazan TÜM yerleri kendi Amazon Associates TAG'inizle değiştirin
 2. Domain'inizin (ornek.com) DNS ayarlarının doğru yapılandırıldığından emin olun
 3. HTTPS kullanıyorsanız SSL sertifikanızın geçerli olduğundan emin olun
 

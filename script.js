@@ -27,7 +27,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.5/5)",
         prime: true,
         description: "Premium beam wiper blades with all-weather performance. Fits most vehicles.",
-        amazonLink: "https://www.amazon.com/s?k=bosch+icon+wiper+blades&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=bosch+icon+wiper+blades"
     },
     {
         id: 2,
@@ -38,7 +38,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.8/5)",
         prime: true,
         description: "Advanced full synthetic engine oil for superior engine protection and performance.",
-        amazonLink: "https://www.amazon.com/s?k=mobil+1+synthetic+oil&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=mobil+1+synthetic+oil"
     },
     {
         id: 3,
@@ -49,7 +49,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.6/5)",
         prime: false,
         description: "High-performance AGM battery with excellent cold-cranking power and durability.",
-        amazonLink: "https://www.amazon.com/s?k=acdelco+battery&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=acdelco+battery"
     },
     {
         id: 4,
@@ -60,7 +60,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐ (4.3/5)",
         prime: true,
         description: "Premium ceramic brake pads for quiet operation and superior stopping power.",
-        amazonLink: "https://www.amazon.com/s?k=wagner+brake+pads&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=wagner+brake+pads"
     },
     {
         id: 5,
@@ -71,7 +71,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.7/5)",
         prime: true,
         description: "Washable, reusable air filter designed to increase horsepower and acceleration.",
-        amazonLink: "https://www.amazon.com/s?k=k%26n+air+filter&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=k%26n+air+filter"
     },
     {
         id: 6,
@@ -82,7 +82,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.6/5)",
         prime: true,
         description: "Water repellent treatment for improved visibility and safer driving in rain.",
-        amazonLink: "https://www.amazon.com/s?k=rain-x+glass+treatment&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=rain-x+glass+treatment"
     },
     {
         id: 7,
@@ -93,7 +93,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.7/5)",
         prime: false,
         description: "Premium AGM battery with exceptional starting power and long service life.",
-        amazonLink: "https://www.amazon.com/s?k=optima+redtop+battery&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=optima+redtop+battery"
     },
     {
         id: 8,
@@ -104,7 +104,7 @@ const amazonProducts = [
         rating: "⭐⭐⭐⭐⭐ (4.8/5)",
         prime: false,
         description: "Premium all-season tire with excellent tread life and all-weather traction.",
-        amazonLink: "https://www.amazon.com/s?k=michelin+defender+tire&tag=autopartshub2-20"
+        amazonLink: "https://www.amazon.com/s?k=michelin+defender+tire"
     }
 ];
 

@@ -65,12 +65,11 @@
         const urlParams = new URLSearchParams(window.location.search);
         const asin = urlParams.get('asin');
         
-        if (asin) {
-            // Amazon affiliate linki oluştur
+        if (asin && /^[A-Z0-9]{10}$/i.test(asin)) {
             // Amazon affiliate redirect
-            const amazonUrl = `https://www.amazon.com/dp/${asin}?tag=autopartshub2-20`;
-            
-            // Hemen yönlendir (bekleme yok)
+            const amazonUrl = `https://www.amazon.com/dp/${encodeURIComponent(asin)}?tag=autopartshub2-20`;
+
+            // Redirect immediately
             window.location.replace(amazonUrl);
         } else {
             document.getElementById('asinDisplay').textContent = 'ASIN not found!';

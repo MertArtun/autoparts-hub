@@ -14,7 +14,7 @@ app.get('/asin/:asin', (req, res) => {
     const asin = req.params.asin;
     
     // ASIN formatını kontrol et (opsiyonel)
-    if (!/^[A-Z0-9]+$/.test(asin)) {
+    if (!/^[A-Za-z0-9]{10}$/.test(asin)) {
         return res.status(400).send('Invalid ASIN format');
     }
     

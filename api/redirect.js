@@ -2,7 +2,7 @@ export default function handler(req, res) {
   const { asin } = req.query;
 
   // Validate ASIN format
-  if (!asin || !/^[A-Z0-9]+$/i.test(asin)) {
+  if (!asin || !/^[A-Za-z0-9]{10}$/.test(asin)) {
     return res.status(400).send('Invalid ASIN format');
   }
 
