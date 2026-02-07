@@ -2,4 +2,4 @@ RewriteEngine On
 
 # ASIN yönlendirme kuralı
 # Örnek: /asin/B0F36VDVG1 -> https://www.amazon.com/dp/B0F36VDVG1?tag=autopartshub2-20
-RewriteRule ^asin/([A-Z0-9]+)$ https://www.amazon.com/dp/$1?tag=autopartshub2-20 [R=302,L]
+RewriteRule ^asin/([A-Za-z0-9]{10})$ https://www.amazon.com/dp/$1?tag=autopartshub2-20 [R=302,L,NC]

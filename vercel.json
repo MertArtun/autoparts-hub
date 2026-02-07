@@ -3,6 +3,10 @@
     {
       "source": "/asin/:asin",
       "destination": "/api/redirect"
+    },
+    {
+      "source": "/ASIN/:asin",
+      "destination": "/api/redirect"
     }
   ]
 }
