@@ -67,7 +67,7 @@
         
         if (asin && /^[A-Z0-9]{10}$/i.test(asin)) {
             // Amazon affiliate redirect
-            const amazonUrl = `https://www.amazon.com/dp/${encodeURIComponent(asin)}?tag=autopartshub2-20`;
+            const amazonUrl = `https://www.amazon.com/dp/${encodeURIComponent(asin)}?th=1&psc=1&tag=autopartshub2-20&linkCode=ogi`;
 
             // Redirect immediately
             window.location.replace(amazonUrl);

@@ -10,6 +10,15 @@ function appendAmazonTag(url) {
     const parsed = new URL(url);
     parsed.searchParams.delete("tag");
     parsed.searchParams.set("tag", AMAZON_AFFILIATE_TAG);
+    if (!parsed.searchParams.has("th")) {
+      parsed.searchParams.set("th", "1");
+    }
+    if (!parsed.searchParams.has("psc")) {
+      parsed.searchParams.set("psc", "1");
+    }
+    if (!parsed.searchParams.has("linkCode")) {
+      parsed.searchParams.set("linkCode", "ogi");
+    }
     return parsed.toString();
   } catch {
     return url;
